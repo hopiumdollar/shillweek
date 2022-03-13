@@ -18,9 +18,7 @@ func main() {
 	r.LoadHTMLGlob("templates/*")
 
 	r.GET("/", func(c *gin.Context) {
-		c.HTML(http.StatusOK, "index.tmpl", gin.H{
-			"title": "Main website",
-		})
+		c.HTML(http.StatusOK, "index.tmpl", gin.H{})
 	})
 
 	// r.GET("/", handler.ShillWeekGet(feed))
